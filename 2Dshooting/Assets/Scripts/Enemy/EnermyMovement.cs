@@ -19,4 +19,6 @@ public class EnermyMovement : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, moveSpeed * Time.deltaTime);
         
     }
+    
+    
 }
