@@ -42,12 +42,23 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = false;
         Time.timeScale = 1f;
     }
+
    public void Restart()
    {
-      SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-      Time.timeScale = 1f;
-      GameIsPaused = false;
-   }
+   if (SceneManager.GetActiveScene().buildIndex == 2)
+      {
+         // Load the Game scene (scene index 1) to restart from Game Over
+         SceneManager.LoadScene(1);
+      }
+      else
+      {
+         // Restart the current scene (Game scene)
+         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+      }
+}
+}
+
+
 
   
-}
+
