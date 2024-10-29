@@ -5,17 +5,14 @@ using UnityEngine;
 public class KnifeBehaviour : ProjectileWeaponBehaviour
 {
 
-    KnifeController kc;
-
     protected override void Start()
     {
         base.Start();
-        kc = FindObjectOfType<KnifeController>();
     }
 
 
     void Update()
     {
-        transform.position += direction * kc.speed * Time.deltaTime; //knife movement
+        transform.position += direction * weaponData.Speed * Time.deltaTime; //knife movement
     }
 }

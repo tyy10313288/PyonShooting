@@ -577,11 +577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a3478fd52eb8a34ca19d8c338fae099, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 7925837337325885708, guid: 8a93ab4c41efeaa438c4b59275ea9b42, type: 3}
-  damage: 0
-  speed: 15
-  cooldownDuration: 2
-  pierce: 0
+  weaponData: {fileID: 11400000, guid: 9f6dd8fa35db27c42bc910456689e35a, type: 2}
 --- !u!1 &814476917 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5272552500058403403, guid: cf6879ba03f6f5e4ab3ad5150b0ba076, type: 3}
@@ -805,7 +801,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -588.177, y: 530.528}
+  m_AnchoredPosition: {x: -627, y: 349}
   m_SizeDelta: {x: 639.645, y: 53.983}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1234658572
@@ -1429,8 +1425,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7f209bebdc22304f915feb5b663f588, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyData: {fileID: 11400000, guid: 9daf3c5101c20f845b5784eec27e7c4d, type: 2}
   playerHealth: {fileID: 104352738}
-  moveSpeed: 2
+  damageInterval: 1
+--- !u!114 &1744619836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744619831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 030da6f6ebdc4174b9cc64aa6c143d28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyData: {fileID: 11400000, guid: 9daf3c5101c20f845b5784eec27e7c4d, type: 2}
 --- !u!1 &1806856106
 GameObject:
   m_ObjectHideFlags: 0
@@ -1723,6 +1733,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3358405453186717994, guid: eb5f2fc1f33ecb54080ccd08d84c08c1, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 104352738}
     - target: {fileID: 3381610774539443045, guid: eb5f2fc1f33ecb54080ccd08d84c08c1, type: 3}
       propertyPath: m_IsTrigger
       value: 0
@@ -1773,15 +1787,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7739629847465131447, guid: eb5f2fc1f33ecb54080ccd08d84c08c1, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Enemy
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -3358405453186717994, guid: eb5f2fc1f33ecb54080ccd08d84c08c1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7739629847465131447, guid: eb5f2fc1f33ecb54080ccd08d84c08c1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1744619835}
+    - targetCorrespondingSourceObject: {fileID: 7739629847465131447, guid: eb5f2fc1f33ecb54080ccd08d84c08c1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1744619836}
   m_SourcePrefab: {fileID: 100100000, guid: eb5f2fc1f33ecb54080ccd08d84c08c1, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
