@@ -2,6 +2,7 @@
   "dependencies": {
     "com.unity.2d.animation": {
       "version": "9.1.2",
+
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -53,6 +54,7 @@
         "com.unity.2d.common": "8.0.2",
         "com.unity.2d.sprite": "1.0.0",
         "com.unity.2d.animation": "9.1.1"
+
       },
       "url": "https://packages.unity.com"
     },
@@ -83,7 +85,7 @@
       }
     },
     "com.unity.2d.tilemap.extras": {
-      "version": "3.1.2",
+      "version": "3.1.1",
       "depth": 1,
       "source": "registry",
       "dependencies": {
