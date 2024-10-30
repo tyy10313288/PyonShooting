@@ -6,7 +6,7 @@ public class EnermyMovement : MonoBehaviour
 {
     public EnemyScriptableObject enemyData;
 
-    public PlayerHealth playerHealth;
+    //public PlayerHealth playerHealth;
 
     public float damageInterval = 1f;
     private float lastDamageTime;
@@ -45,12 +45,16 @@ public class EnermyMovement : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D collision)
     {
+        Debug.Log("Col2");
         if (collision.gameObject.CompareTag("Player") && Time.time - lastDamageTime >= damageInterval)
         {
-            if (playerHealth != null)
+            PlayerHealth ph = collision.gameObject.GetComponent<PlayerHealth>();
+            Debug.Log("Col1 ");
+            if (ph != null)
             {
-                playerHealth.TakeDamage(1);
+                ph.TakeDamage(1);
                 lastDamageTime = Time.time;
+
             }
         }
     }
