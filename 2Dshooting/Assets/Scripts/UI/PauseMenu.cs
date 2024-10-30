@@ -42,6 +42,28 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = false;
         Time.timeScale = 1f;
     }
+    /*public void Restart()
+{
+   // 確保遊戲的時間速度設定為正常
+   Time.timeScale = 1f;
+
+   // 檢查當前場景索引
+   int sceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+   // 如果是 Game Over 场景 (假設為索引 2)，則加載 Game 场景 (假設為索引 1)
+   if (sceneIndex == 2)
+   {
+      SceneManager.LoadScene(1);
+   }
+   else
+   {
+      // 重新加載當前場景
+      SceneManager.LoadScene(sceneIndex);
+   }
+
+   // 確保遊戲暫停狀態被重置
+   GameIsPaused = false;
+}*/
 
    public void Restart()
    {
